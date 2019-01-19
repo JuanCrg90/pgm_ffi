@@ -1,2 +1,2 @@
 all:
-	gcc main.c -o main
+	gcc main.c ./pgmlib/lib/*.c -o main

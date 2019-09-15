@@ -1,4 +1,4 @@
-require_relative './bindings/base'
+require 'pgm/bindings/base'
 module PGM
   # PGM Library Functions
   module Functions

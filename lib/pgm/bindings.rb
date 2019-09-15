@@ -1,5 +1,5 @@
-require_relative './bindings/structs'
-require_relative './bindings/base'
+require 'pgm/bindings/structs'
+require 'pgm/bindings/base'
 
 module PGM
   module Bindings; end

@@ -1,7 +1,7 @@
 require 'ffi'
 
-require_relative './pgm/bindings'
-require_relative './pgm/functions'
+require 'pgm/bindings'
+require 'pgm/functions'
 
 module PGM
   extend Functions

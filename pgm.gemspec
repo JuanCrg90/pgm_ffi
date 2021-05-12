@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = "> 2.3"
   spec.files = `git ls-files`.split("\n")
 
-  spec.add_runtime_dependency "ffi", "~> 1.11"
+  spec.add_runtime_dependency "ffi", "~> 1.15.0"
 
-  spec.add_development_dependency 'bundler', '~> 2.0'
-  spec.add_development_dependency 'rake', '~> 12.3'
+  spec.add_development_dependency 'bundler', '~> 2.2.15'
+  spec.add_development_dependency 'rake', '~> 13.0.3'
 end

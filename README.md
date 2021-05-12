@@ -10,27 +10,33 @@ This repository contains a little test that I performed after read the article. 
 a inverted colors image.
 
 ## How to run this
-1. compile the library in your local.
-  a. go to `ext/src` directory and run `make shared`
-2. execute a `irb` console and import the library
+Install dependencies and compile the C library:
+
+```bash
+bin/setup
+```
 
 ## Example of use
+
+Start an irb console with the library loaded
+```bash
+$ bin/console
 ```
->> require './pgm'
-=> true
->>
->> pgm = PGM::Bindings::Structs::Pgm.new
-=> #<PGM::Bindings::Structs::Pgm:0x007fc443825c30>
->> PGM::Functions.load_pgm(pgm, './Feep.pgm')
-=> #<FFI::Pointer address=0x00000000000000>
->> pgm_out = PGM::Bindings::Structs::Pgm.new
-=> #<PGM::Bindings::Structs::Pgm:0x007fc44208a918>
->> PGM::Functions.invert_colors(pgm, pgm_out)
-=> nil
->> PGM::Functions.save_pgm(pgm_out, './feep_out')
-=> #<FFI::Pointer address=0x00000000000000>
->> PGM::Functions.save_pgm(pgm_out, './feep_out.pgm')
-=> #<FFI::Pointer address=0x00000000000000>
+
+```ruby
+# Create in memory the instances that will store the images
+pgm = PGM::Bindings::Structs::Pgm.new
+pgm_out = PGM::Bindings::Structs::Pgm.new
+
+# Load the image
+PGM::Functions.load_pgm(pgm, './example/a.pgm')
+
+# Invert colors
+PGM::Functions.invert_colors(pgm, pgm_out)
+
+# Save image in disk
+PGM::Functions.save_pgm(pgm_out, './example/out.pgm')
 ```
+
 ## Contributing
 Bug reports and pull requests are welcome!

@@ -83,7 +83,7 @@ void invertColors(Pgm* pgmIn, Pgm* pgmOut) {
 
   for(int i = 0; i < pgmOut->height; i++) {
     for(int j = 0; j < pgmOut->width; j++) {
-      pgmOut->image[i][j] = 15 - pgmIn->image[i][j];
+      pgmOut->image[i][j] = pgmIn->maxVal - pgmIn->image[i][j];
     }
   }
 }

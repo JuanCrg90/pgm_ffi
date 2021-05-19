@@ -29,7 +29,7 @@ pgm = PGM::Bindings::Structs::Pgm.new
 pgm_out = PGM::Bindings::Structs::Pgm.new
 
 # Load the image
-PGM::Functions.load_pgm(pgm, './example/a.pgm')
+PGM::Functions.load_pgm(pgm, './example/in.pgm')
 
 # Invert colors
 PGM::Functions.invert_colors(pgm, pgm_out)
